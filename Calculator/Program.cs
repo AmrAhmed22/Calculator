@@ -52,7 +52,14 @@
 
         static double Divide(double num1, double num2)
         {
-            return num1 / num2;
+            if (num2 == 0)
+            {
+                return double.NaN;
+            }
+            else
+            {
+                return num1 / num2;
+            }
         }
 
 
@@ -76,7 +83,16 @@
 
             }
 
-            Console.WriteLine($"Result: {num1} {op} {num2} = {res}");
+
+            if (double.IsNaN(res))
+            {
+                Console.WriteLine("Error: Can't divide by zero.");
+            }
+            else
+            {
+                Console.WriteLine($"Result: {num1} {op} {num2} = {res}");
+            }
+
         }
 
 
