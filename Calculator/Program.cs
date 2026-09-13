@@ -35,26 +35,49 @@
         }
 
 
+        static double Add(double num1,double num2)
+        {
+            return num1 + num2;
+        }
+
+        static double Subtract(double num1, double num2)
+        {
+            return num1 - num2;
+        }
+
+        static double Multiply(double num1, double num2)
+        {
+            return num1 * num2;
+        }
+
+        static double Divide(double num1, double num2)
+        {
+            return num1 / num2;
+        }
+
+
         static void CalcHandler(double num1, double num2, string op)
         {
-
+            double res = 0;
             switch (op)
             {
                 case "+":
-                    
+                    res = Add(num1, num2);               
                     break;
                 case "-":
-                    
+                    res = Subtract(num1, num2);
                     break;
                 case "*":
-                   
+                    res = Multiply(num1, num2);
                     break;
                 case "/":
-                   
+                    res = Divide(num1, num2);
                     break;
 
-                }
             }
+
+            Console.WriteLine($"Result: {num1} {op} {num2} = {res}");
+        }
 
         static void Main(string[] args)
         {
